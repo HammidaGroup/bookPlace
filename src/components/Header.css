@@ -1,0 +1,45 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 73px;
+    width: 100vw;
+    max-width: 100%;
+    position: sticky;   /* ya fixed */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: var(--header-color);
+    overflow: hidden;
+    background: var(--header-color);
+}
+.header .leftH img{
+    height: 100px;
+    cursor: pointer;
+    
+}
+.header .rightH{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction:row-reverse;
+    align-items: center;
+    /* background: red; */
+    width: 60%;
+}
+
+.header .cart-btn  {
+  /* position: absolute; */
+  top: 30px;
+  right: 100px;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  /* display: none; */
+}
+
+.rightH .menu-btn{
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+     
+}

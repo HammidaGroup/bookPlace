@@ -1,0 +1,62 @@
+[
+  {
+    "class": "Class 6",
+    "price": 120,
+    "desc": "UP Board Class 6 Hindi medium book, good condition, no missing pages.",
+    "img": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f"
+  },
+  {
+    "class": "Class 7",
+    "price": 150,
+    "desc": "UP Board Class 7 Science book, lightly used, clean pages.",
+    "img": "https://images.unsplash.com/photo-1512820790803-83ca734da794"
+  },
+  {
+    "class": "Class 8",
+    "price": 180,
+    "desc": "UP Board Class 8 Maths book, best for exam preparation.",
+    "img": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d"
+  },
+  {
+    "class": "Class 9",
+    "price": 220,
+    "desc": "UP Board Class 9 Social Science book, readable condition.",
+    "img": "https://images.unsplash.com/photo-1516979187457-637abb4f9353"
+  },
+  {
+    "class": "Class 10",
+    "price": 250,
+    "desc": "UP Board Class 10 Science book, important chapters highlighted.",
+    "img": "https://images.unsplash.com/photo-1528207776546-365bb710ee93"
+  },
+  {
+    "class": "Class 11",
+    "price": 320,
+    "desc": "UP Board Class 11 Physics book, minimal usage, exam-ready.",
+    "img": "https://images.unsplash.com/photo-1519681393784-d120267933ba"
+  },
+  {
+    "class": "Class 12",
+    "price": 350,
+    "desc": "UP Board Class 12 Chemistry book, very good condition.",
+    "img": "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+  },
+  {
+    "class": "Class 9",
+    "price": 200,
+    "desc": "UP Board Class 9 English book, clean and well maintained.",
+    "img": "https://images.unsplash.com/photo-1496104679561-38b3b4d9f1c4"
+  },
+  {
+    "class": "Class 10",
+    "price": 270,
+    "desc": "UP Board Class 10 Maths book, practice-friendly edition.",
+    "img": "https://images.unsplash.com/photo-1532012197267-da84d127e765"
+  },
+  {
+    "class": "Class 12",
+    "price": 380,
+    "desc": "UP Board Class 12 Biology book, perfect for board exams.",
+    "img": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c"
+  }
+]
