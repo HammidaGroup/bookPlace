@@ -26,11 +26,23 @@
     /* background: red; */
     width: 60%;
 }
-
+.header .cart-div{
+  position: absolute;
+  height: 100%;
+  width: 100px;
+  right: 20px;
+  /* background: #5c4b4b; */
+  /* display: none; */
+  
+}
+.header p{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
 .header .cart-btn  {
   /* position: absolute; */
   top: 30px;
-  right: 100px;
   width: 34px;
   height: 34px;
   cursor: pointer;

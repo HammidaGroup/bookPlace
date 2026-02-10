@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "./Header.css"
 import jameeIndiaLogo from "../assets/bookPlace.png"
 import addCartPng from "../assets/add-to-cart.png";
@@ -12,7 +12,9 @@ const Header = () => {
 
   const menuLogicContext = useContext(MenuLogicContext)
 //  console.log(searchContext.searchVal);
- 
+const [cartCount, setCartCount] = useState(0);
+  
+
   const menuHandler = ()=>{
     if (menuLogicContext.menuVisbleConditionalData == true){
         menuLogicContext.setMenuVisbleConditionalData(false)
@@ -22,6 +24,25 @@ const Header = () => {
     }
   }
 
+
+  useEffect(() => {
+    const storedCart = localStorage.getItem("cart");
+    if (storedCart) {
+      try {
+        const cartItems = JSON.parse(storedCart);
+        setCartCount(cartItems.length);
+      } catch (err) {
+        console.error("Invalid cart data:", err);
+        setCartCount(0);
+      }
+    } else {
+      setCartCount(0);  
+    }
+    }, []);
+const cartHandler = ()=>{
+  navigate("/cart")
+}
+
   return (
     <>
     <nav className='header' >
@@ -29,7 +50,10 @@ const Header = () => {
         <img onClick={() => navigate("/")} src={jameeIndiaLogo} alt="jameeIndiaLogo" />  
       </div>
       <div className="rightH">
-       <img className='cart-btn' src={addCartPng} alt="cart" />
+       <div onClick={cartHandler} className="cart-div">
+        <p>{cartCount}</p>
+        <img className='cart-btn' src={addCartPng} alt="cart" />
+       </div>
         <img className='menu-btn' src={menuPng} onClick={menuHandler} alt="menu" />
       </div>
     </nav>
