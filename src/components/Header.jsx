@@ -6,14 +6,18 @@ import menuPng from "../assets/menu.png"
 
 import { MenuLogicContext } from '../context/menuLogicContext'
 import { useNavigate } from 'react-router-dom';
+import { cartContext } from '../context/CartCotext';
 
 const Header = () => {
+
+  const cartContextState = useContext(cartContext)
   const navigate = useNavigate();
 
   const menuLogicContext = useContext(MenuLogicContext)
 //  console.log(searchContext.searchVal);
 const [cartCount, setCartCount] = useState(0);
   
+// console.log(cartContextState.cartUpd);
 
   const menuHandler = ()=>{
     if (menuLogicContext.menuVisbleConditionalData == true){
@@ -41,13 +45,14 @@ const [cartCount, setCartCount] = useState(0);
     }, []);
 const cartHandler = ()=>{
   navigate("/cart")
+
 }
 
   return (
     <>
     <nav className='header' >
       <div className="leftH">
-        <img onClick={() => navigate("/")} src={jameeIndiaLogo} alt="jameeIndiaLogo" />  
+        <img onClick={() => navigate("/")} src={jameeIndiaLogo} alt="BOOKPLACELogo" />  
       </div>
       <div className="rightH">
        <div onClick={cartHandler} className="cart-div">

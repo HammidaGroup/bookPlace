@@ -76,9 +76,14 @@
 	background: #c0392b;
 }
 .cart-total {
+	display: flex;
+	flex-direction: column;
 	text-align: right;
 	margin-top: 18px;
 	font-size: 18px;
 	color: #333;
 	font-weight: bold;
+}
+.cart-total span{
+	margin-bottom: 10px;
 }

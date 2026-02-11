@@ -27,6 +27,7 @@ Looking forward to your response.
 
     const url = `https://wa.me/917571950460?text=${encodeURIComponent(message)}`;
     window.location.href = url;
+    // navigate("/contact")
   };
 
   const addCartHandler = () => {
@@ -45,7 +46,7 @@ Looking forward to your response.
   // check if book already exists
   const alreadyInCart = cart.some(
     (item) => item.class === value.class && item.price === value.price
-  );
+   && item.desc === value.desc);
 
   if (alreadyInCart) {
     alert("This book is already in your cart 📚");
@@ -59,8 +60,9 @@ Looking forward to your response.
   });
 
   localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Book Added In Cart")
   // cartCotextState.setcartUpd()
-  console.log(cartCotextState);
+  // console.log(cartCotextState);
   
  
 };

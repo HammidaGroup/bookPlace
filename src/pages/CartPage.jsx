@@ -4,15 +4,21 @@ import "./CartPages.css";
 import Header from '../components/Header';
 import Menu from '../components/Menu';
 import { cartContext } from '../context/CartCotext';
+import CartOrdBtn from '../components/BtnCompo/CartOrdBtn';
 
 const CartPage = () => {
      const cartCotextState = useContext(cartContext)
   const [cartItems, setCartItems] = useState([]);
-
+ 
+  let ordBtn ;
   useEffect(() => {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     cartCotextState.setCartUpd(cart.length)
+    console.log(cartCotextState);
+    
     setCartItems(cart);
+
+   
 
   }, []);
 
@@ -26,6 +32,16 @@ const CartPage = () => {
   const getTotal = () => {
     return cartItems.reduce((acc, item) => acc + item.price, 0);
   };
+
+   if (cartItems.length === 0) {
+      ordBtn = "";
+      
+      
+    }else{
+      
+      
+      ordBtn= <CartOrdBtn value = {cartItems} total={getTotal()}/>
+    }
 
   return (
     <>
@@ -50,6 +66,7 @@ const CartPage = () => {
           ))}
           <div className="cart-total">
             <span>Total: ₹{getTotal()}</span>
+          <CartOrdBtn value = {cartItems} total={getTotal()}/>
           </div>
         </div>
       )}
