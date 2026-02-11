@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import "./Header.css"
-import jameeIndiaLogo from "../assets/bookPlace.png"
+import bookPlaceLogo from "/bookPlace.webp"
 import addCartPng from "../assets/add-to-cart.png";
 import menuPng from "../assets/menu.png"
 
@@ -52,7 +52,7 @@ const cartHandler = ()=>{
     <>
     <nav className='header' >
       <div className="leftH">
-        <img onClick={() => navigate("/")} src={jameeIndiaLogo} alt="BOOKPLACELogo" />  
+        <img onClick={() => navigate("/")} src={bookPlaceLogo} alt="BOOKPLACELogo" />  
       </div>
       <div className="rightH">
        <div onClick={cartHandler} className="cart-div">
