@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Menu from '../components/Menu';
 import { cartContext } from '../context/CartCotext';
 import CartOrdBtn from '../components/BtnCompo/CartOrdBtn';
+import Footer from '../components/Footer';
 
 const CartPage = () => {
      const cartCotextState = useContext(cartContext)
@@ -70,6 +71,7 @@ const CartPage = () => {
           </div>
         </div>
       )}
+     
     </div>
     </>
   );

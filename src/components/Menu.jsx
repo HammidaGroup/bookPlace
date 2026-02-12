@@ -37,34 +37,7 @@ if(menuConditionalState.menuVisbleConditionalData == true){
                         </div>
                     </li>
                    </Link>
-                         <Link to="/addProperty" >
-                         <li>
-                        <div>
-                            
-                            <img className="menu-btn" src={addpng} alt="Home Icon"/>
-                                <span>Add Property</span>
-                        </div>
-                    </li>
-                         </Link>
-                       
-                           <Link to="/favorites" >
-                         <li>
-                        <div>
-                            
-                            <img className="menu-btn" src={favoritePng} alt="Home Icon"/>
-                                <span>Favorites</span>
-                        </div>
-                    </li>
-                         </Link>
-                             <Link to="/Dasboard" >
-                         <li>
-                        <div>
-                            
-                            <img className="menu-btn" src={deshboardpng} alt="deshboard"/>
-                                <span>DashBoard</span>
-                        </div>
-                    </li>
-                         </Link>
+                         
                     <li>
                         <div>
                             <img className="menu-btn" src={contactUspng} alt="Contact Us Icon"/>
@@ -86,12 +59,7 @@ if(menuConditionalState.menuVisbleConditionalData == true){
                                 <span>Privacy Policy </span>
                         </div>
                     </li>
-                    <li>
-                        <div>
-                            <img className="menu-btn" src={logoutpng}alt="Privacy Policy Icon"/>
-                                <span onClick={logoutHandler}>Logout </span>
-                        </div>
-                    </li>
+                    
 
                 </ul>
             </nav>
