@@ -7,6 +7,7 @@ import Menu from "../components/Menu";
 import HomePageTopHeroComponent from "../components/HomePageTopHero-Component";
 import Loading from "../components/Loading";
 import Footer from "../components/Footer";
+import Catogary from "../components/Catogary";
 
 const HomePage = () => {
   const searchContext = useContext(searchValContext);
@@ -75,6 +76,7 @@ const HomePage = () => {
       <div className="homeMainDiv">
         <Menu />
         <HomePageTopHeroComponent />
+        <Catogary/>
         <div className="home-card-div">{content}</div>
       </div>
        
