@@ -1,5 +1,21 @@
 [
   {
+    "id": 6,
+ 
+    "class": "Class 9",
+    "price": 249,
+    "desc": "UP Board Class 9 English digest with complete study material.",
+    "img": "https://res.cloudinary.com/dl2n7mnwq/image/upload/v1770950231/WhatsApp_Image_2026-02-12_at_6.01.27_PM_1_fvtssd.jpg"
+  },
+    {
+    "id": 4,
+    
+    "class": "Class 9",
+    "price": 249,
+    "desc": "UP Board Class 9 Science digest book based on NCERT.",
+    "img": "https://res.cloudinary.com/dl2n7mnwq/image/upload/v1770950237/WhatsApp_Image_2026-02-12_at_6.01.26_PM_mgcm0q.jpg"
+  },
+  {
     "class": "Class 11",
     "price": 400,
     "desc": "UP Board Class 11 Hindi book. Useful for exam preparation. NCERT",
@@ -34,7 +50,7 @@
     "id": 1,
     
     "class": "Class 11",
-    "price": 150,
+    "price": 149,
     "desc": "UP Board Class 11 English book based on NCERT syllabus.",
     "img": "https://res.cloudinary.com/dl2n7mnwq/image/upload/v1770950230/WhatsApp_Image_2026-02-12_at_6.01.29_PM_wqcefn.jpg"
   },
@@ -42,7 +58,7 @@
     "id": 2,
     
     "class": "Class 11",
-    "price": 150,
+    "price": 149,
     "desc": "UP Board Class 11 Hindi book. Useful for exam preparation. NCERT.",
     "img": "https://res.cloudinary.com/dl2n7mnwq/image/upload/v1770950231/WhatsApp_Image_2026-02-12_at_6.01.22_PM_dzdfzl.jpg"
   },
@@ -50,33 +66,18 @@
     "id": 3,
     
     "class": "Class 9",
-    "price": 250,
+    "price": 249,
     "desc": "UP Board Class 9 Social Science complete course book.",
     "img": "https://res.cloudinary.com/dl2n7mnwq/image/upload/v1770950236/WhatsApp_Image_2026-02-12_at_6.01.23_PM_bm2yci.jpg"
   },
-  {
-    "id": 4,
-    
-    "class": "Class 9",
-    "price": 250,
-    "desc": "UP Board Class 9 Science digest book based on NCERT.",
-    "img": "https://res.cloudinary.com/dl2n7mnwq/image/upload/v1770950237/WhatsApp_Image_2026-02-12_at_6.01.26_PM_mgcm0q.jpg"
-  },
+
   {
     "id": 5,
     
     "class": "Class 10",
-    "price": 150,
+    "price": 149,
     "desc": "UP Board Class 10 Mathematics digest for exam preparation.",
     "img": "https://res.cloudinary.com/dl2n7mnwq/image/upload/v1770950238/WhatsApp_Image_2026-02-12_at_6.01.27_PM_r3a7zd.jpg"
-  },
-  {
-    "id": 6,
- 
-    "class": "Class 9",
-    "price": 200,
-    "desc": "UP Board Class 9 English digest with complete study material.",
-    "img": "https://res.cloudinary.com/dl2n7mnwq/image/upload/v1770950231/WhatsApp_Image_2026-02-12_at_6.01.27_PM_1_fvtssd.jpg"
   }
 
 ]
