@@ -107,7 +107,7 @@ const HomePage = () => {
         <HomePageTopHeroComponent />
         <Catogary />
         <div className="home-card-div">{content}</div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );
