@@ -31,7 +31,7 @@ const CartPage = () => {
   };
 
   const getTotal = () => {
-    return cartItems.reduce((acc, item) => acc + item.price, 0);
+    return cartItems.reduce((acc, item) => acc + item.bookPrice, 0);
   };
 
    if (cartItems.length === 0) {
