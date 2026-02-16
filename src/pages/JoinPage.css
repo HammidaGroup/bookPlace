@@ -1,0 +1,41 @@
+.signup-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 24px;
+  border: 1px solid #eee;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #eee;
+}
+
+
+
+
+.google-btn {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  /* color: #444; */
+  color: green;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  gap: 8px;
+  transition: box-shadow 0.2s;
+}
+.google-btn:hover {
+  box-shadow: 0 2px 8px #ccc;
+}
+
+.signup-success {
+  margin-top: 20px;
+  color: green;
+  text-align: center;
+  font-weight: 500;
+}

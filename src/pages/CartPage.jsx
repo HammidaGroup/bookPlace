@@ -56,11 +56,11 @@ const CartPage = () => {
         <div className="cart-items">
           {cartItems.map((item, idx) => (
             <div className="cart-item" key={idx}>
-              <img src={item.img} alt={item.class} className="cart-item-img" />
+              <img src={item.bookImg} alt={item.bookClass} className="cart-item-img" />
               <div className="cart-item-info">
-                <h3>{item.class}</h3>
-                <p>{item.desc}</p>
-                <span>₹{item.price}</span>
+                <h3>{item.bookClass}</h3>
+                <p>{item.bookDesc}</p>
+                <span>₹{item.bookPrice}</span>
                 <button className="remove-btn" onClick={() => removeFromCart(idx)}>Remove</button>
               </div>
             </div>

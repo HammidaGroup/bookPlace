@@ -10,34 +10,62 @@ import Footer from "../components/Footer";
 import Catogary from "../components/Catogary";
 
 const HomePage = () => {
-  const searchContext = useContext(searchValContext);
-  const [filterData, setFilterData] = useState([]);
+  const { searchVal } = useContext(searchValContext);
+
+  const [books, setBooks] = useState([]);
+  const [filteredBooks, setFilteredBooks] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  // 🔥 Fetch Data
   useEffect(() => {
     const fetchBooks = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch("/data.json");
-        const data = await response.json();
 
-        const filtered = data.filter((item) =>
-          `${item.class} ${item.desc}`
-            .toLowerCase()
-            .includes(searchContext.searchVal.toLowerCase())
+        const response = await fetch(
+          "http://localhost:3000/api/send/bookData"
         );
 
-        setFilterData(filtered);
-      } catch (err) {
-        console.error("JSON error:", err);
+        if (!response.ok) {
+          throw new Error("Failed to fetch books");
+        }
+
+        const data = await response.json();
+
+        // Only active books
+        const activeBooks = data.data.filter(
+          (item) => item.status === "active"
+        );
+
+        setBooks(activeBooks);
+        setFilteredBooks(activeBooks);
+      } catch (error) {
+        console.error("Fetch error:", error);
       } finally {
         setIsLoading(false);
       }
     };
 
     fetchBooks();
-  }, [searchContext.searchVal]);
+  }, []);
 
+  // 🔥 Search Filter
+  useEffect(() => {
+    const filtered = books.filter((item) => {
+      const searchString = `
+        ${item.bookClass}
+        ${item.subject}
+        ${item.bookDesc}
+        ${item.bookPrice}
+      `.toLowerCase();
+
+      return searchString.includes(searchVal.toLowerCase());
+    });
+
+    setFilteredBooks(filtered);
+  }, [searchVal, books]);
+
+  // 🔥 Chunk Books (2 per row)
   const chunkArray = (arr, size) => {
     const result = [];
     for (let i = 0; i < arr.length; i += size) {
@@ -50,19 +78,20 @@ const HomePage = () => {
 
   if (isLoading) {
     content = <Loading />;
-  } else if (filterData.length === 0) {
-    content = <p className="no-data">
-  No books found 📚 <br />
-  Try searching by class or subject.
-</p>
-
+  } else if (filteredBooks.length === 0) {
+    content = (
+      <p className="no-data">
+        No books found 📚 <br />
+        Try searching by class, subject or price.
+      </p>
+    );
   } else {
     content = (
       <>
-        {chunkArray(filterData, 2).map((group, index) => (
+        {chunkArray(filteredBooks, 2).map((group, index) => (
           <div className="card-cont" key={index}>
-            {group.slice(0, 10).map((bookData, i) => (
-              <BookCard key={i} value={bookData} />
+            {group.map((bookData) => (
+              <BookCard key={bookData._id} value={bookData} />
             ))}
           </div>
         ))}
@@ -76,12 +105,10 @@ const HomePage = () => {
       <div className="homeMainDiv">
         <Menu />
         <HomePageTopHeroComponent />
-        <Catogary/>
+        <Catogary />
         <div className="home-card-div">{content}</div>
+        <Footer />
       </div>
-       
-        
-        
     </>
   );
 };

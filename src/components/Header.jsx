@@ -7,6 +7,9 @@ import menuPng from "../assets/menu.png"
 import { MenuLogicContext } from '../context/menuLogicContext'
 import { useNavigate } from 'react-router-dom';
 import { cartContext } from '../context/CartCotext';
+import JoinBtn from './BtnCompo/JoinBtn';
+
+import AddBookBtn from './BtnCompo/AddBookBtn';
 
 const Header = () => {
 
@@ -52,7 +55,7 @@ const cartHandler = ()=>{
     <>
     <nav className='header' >
       <div className="leftH">
-        <img onClick={() => navigate("/")} src={bookPlaceLogo} alt="BOOKPLACELogo" />  
+        <img onClick={() => navigate("/")} src={bookPlaceLogo} alt="BOOKPLACELogo" />
       </div>
       <div className="rightH">
        <div onClick={cartHandler} className="cart-div">
@@ -60,6 +63,8 @@ const cartHandler = ()=>{
         <img className='cart-btn' src={addCartPng} alt="cart" />
        </div>
         <img className='menu-btn' src={menuPng} onClick={menuHandler} alt="menu" />
+        
+      <AddBookBtn/>
       </div>
     </nav>
     </>

@@ -16,9 +16,9 @@ const message = `Hello Sir/Madam,
 
 I am interested in buying this second-hand book.
 
-📘 Class: ${value.class}
-💰 Price: ₹${value.price}
-🖼 Image: ${value.img}
+📘 Class: ${value.bookClass}
+💰 Price: ₹${value.bookPrice}
+🖼 Image: ${value.bookImg}
 
 Kindly share more details regarding the book condition.
 Looking forward to your response.
@@ -45,8 +45,8 @@ Looking forward to your response.
 
   // check if book already exists
   const alreadyInCart = cart.some(
-    (item) => item.class === value.class && item.price === value.price
-   && item.desc === value.desc);
+    (item) => item.bookClass === value.bookClass && item.bookPrice === value.bookPrice
+   && item.bookDesc === value.bookDesc);
 
   if (alreadyInCart) {
     alert("This book is already in your cart 📚");
@@ -71,7 +71,7 @@ Looking forward to your response.
   return (
     <div className="book-card">
       <div className="book-img">
-        <img className="bookImg" src={value.img} alt="book" />
+        <img className="bookImg" src={value.bookImg} alt="book" />
         <img
           src={addCartPng}
           className="cart-btn"
@@ -81,9 +81,9 @@ Looking forward to your response.
       </div>
 
       <div className="book-content">
-        <h3>{value.class}</h3>
-        <p className="price">₹{value.price}</p>
-        <p className="desc">{value.desc}</p>
+        <h3>{value.bookClass}th</h3>
+        <p className="price">₹{value.bookPrice}</p>
+        <p className="desc">{value.bookDesc}</p>
 
         <div className="btn-group">
           <button className="contact-btn" onClick={contactHandler}>

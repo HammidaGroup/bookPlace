@@ -17,10 +17,6 @@ let menu ;
 // console.log(menuConditionalState.menuVisbleConditionalData);
 
 
-const logoutHandler = ()=>{
-    localStorage.clear();
-    window.location.reload();
-}
 
 if(menuConditionalState.menuVisbleConditionalData == true){
     menu = (
@@ -34,6 +30,16 @@ if(menuConditionalState.menuVisbleConditionalData == true){
                             
                             <img className="menu-btn" src={homepng} alt="Home Icon"/>
                                 <span>Home</span>
+                        </div>
+                    </li>
+                   </Link>
+                         
+                   <Link to="/AddBook">
+                    <li>
+                        <div>
+                            
+                            <img className="menu-btn" src={homepng} alt="Home Icon"/>
+                                <span>Add Book</span>
                         </div>
                     </li>
                    </Link>
