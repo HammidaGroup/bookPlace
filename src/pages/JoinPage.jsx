@@ -23,7 +23,7 @@ const JoinPage = () => {
   
 
 const joinHandler = () => {
-  window.location.href = "http://https://bookplace-backend.onrender.com/auth/google";
+  window.location.href = "https://bookplace-backend.onrender.com/auth/google";
 };
 
 //    useEffect(() => {
