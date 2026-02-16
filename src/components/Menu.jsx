@@ -38,7 +38,7 @@ if(menuConditionalState.menuVisbleConditionalData == true){
                     <li>
                         <div>
                             
-                            <img className="menu-btn" src={homepng} alt="Home Icon"/>
+                            <img className="menu-btn" src={addpng} alt="Home Icon"/>
                                 <span>Add Book</span>
                         </div>
                     </li>
