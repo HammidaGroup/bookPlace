@@ -6,6 +6,7 @@ import inpImgIcon from "../assets/inpImgIcon.jpg"
 import { useNavigate } from 'react-router-dom'
 import BookAL from '../components/BookAL'
 import BookAS from '../components/BookAS'
+import SomthingWrong from '../components/SomthingWrong'
 
 const AddBook = () => {
   const navigate = useNavigate()
@@ -19,6 +20,7 @@ const AddBook = () => {
 const [imgPreview, setImgPreview] = useState(null)
 const [isAdding, setIsAdding] = useState(false)
 const [isDone, setIsDone] = useState(false)
+const [isWrong, setIsWrong] = useState(false)
     useEffect(() => {
   const token = localStorage.getItem("token");
 
@@ -27,7 +29,7 @@ const [isDone, setIsDone] = useState(false)
     return;
   }
 
-  fetch("https://bookplace-backend.onrender.com/api/auth/verify", {
+  fetch("http://https://bookplace-backend.onrender.com/api/auth/verify", {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -51,7 +53,7 @@ const [isDone, setIsDone] = useState(false)
    formData.append("bookDesc",bookDesc)
    formData.append("token",localStorage.getItem("token"))
 
-const response = await fetch("https://bookplace-backend.onrender.com/api/book/add",{
+const response = await fetch("http://https://bookplace-backend.onrender.com/api/book/add",{
 
   method:"POST",
   body:formData
@@ -66,6 +68,10 @@ if(mess.mess === "Book added successfully"){
   setTimeout(() => {
     navigate("/")
   }, 3000)
+}else{
+  setIsAdding(false)
+  setIsDone(false)
+  setIsWrong(true)
 }
 
 }
@@ -79,6 +85,7 @@ if(mess.mess === "Book added successfully"){
     <div className="addBook-mainPage">
    { isAdding && <BookAL/>}
     { isDone && <BookAS/>}
+    { isWrong && <SomthingWrong/>}
         <Menu/>
        <div className="formDiv">
          <div className="imgDiv">

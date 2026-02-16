@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import googleSvg from "../assets/google-logo-search-new-svgrepo-com.svg"
 import Menu from '../components/Menu';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import SomthingWrong from '../components/SomthingWrong';
 const JoinPage = () => {
   const navigate = useNavigate()
     const formData = new FormData()
@@ -22,7 +23,7 @@ const JoinPage = () => {
   
 
 const joinHandler = () => {
-  window.location.href = "https://bookplace-backend.onrender.com/auth/google";
+  window.location.href = "http://https://bookplace-backend.onrender.com/auth/google";
 };
 
 //    useEffect(() => {
@@ -40,6 +41,7 @@ const joinHandler = () => {
     <Header/>
     <div className="signup-container">
       <Menu/>
+      {/* <SomthingWrong/> */}
       {/* <h2 className='signup-title' ></h2> */}
     
      
