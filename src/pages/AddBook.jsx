@@ -29,7 +29,7 @@ const [isWrong, setIsWrong] = useState(false)
     return;
   }
 
-  fetch("http://https://bookplace-backend.onrender.com/api/auth/verify", {
+  fetch("https://bookplace-backend.onrender.com/api/auth/verify", {
     headers: {
       Authorization: `Bearer ${token}`,
     },
