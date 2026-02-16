@@ -4,6 +4,8 @@ import Header from '../components/Header'
 import Menu from '../components/Menu'
 import inpImgIcon from "../assets/inpImgIcon.jpg"
 import { useNavigate } from 'react-router-dom'
+import BookAL from '../components/BookAL'
+import BookAS from '../components/BookAS'
 
 const AddBook = () => {
   const navigate = useNavigate()
@@ -15,6 +17,8 @@ const AddBook = () => {
   const [phoneNo, setPhoneNo] = useState()
   const [bookDesc, setBookDesc] = useState("")
 const [imgPreview, setImgPreview] = useState(null)
+const [isAdding, setIsAdding] = useState(false)
+const [isDone, setIsDone] = useState(false)
     useEffect(() => {
   const token = localStorage.getItem("token");
 
@@ -38,6 +42,7 @@ const [imgPreview, setImgPreview] = useState(null)
 }, []);
 // localStorage.clear()
   const addBookBtnHandler = async () =>{
+    setIsAdding(true)
    formData.append("bookImg",bookImg)
    formData.append("bookClass",bookClass)
    formData.append("subject",subject)
@@ -46,7 +51,7 @@ const [imgPreview, setImgPreview] = useState(null)
    formData.append("bookDesc",bookDesc)
    formData.append("token",localStorage.getItem("token"))
 
-const response = await fetch("http://localhost:3000/api/book/add",{
+const response = await fetch("https://bookplace-backend.onrender.com/api/book/add",{
 
   method:"POST",
   body:formData
@@ -54,6 +59,15 @@ const response = await fetch("http://localhost:3000/api/book/add",{
 })
       
 const mess = await response.json()
+console.log(mess);
+if(mess.mess === "Book added successfully"){
+  setIsAdding(false)
+  setIsDone(true)
+  setTimeout(() => {
+    navigate("/")
+  }, 3000)
+}
+
 }
   const imgChangeHandler = (e)=>{
     setBookImg(e.target.files[0])
@@ -63,6 +77,8 @@ const mess = await response.json()
     <>
     <Header/>
     <div className="addBook-mainPage">
+   { isAdding && <BookAL/>}
+    { isDone && <BookAS/>}
         <Menu/>
        <div className="formDiv">
          <div className="imgDiv">

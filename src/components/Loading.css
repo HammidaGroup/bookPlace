@@ -3,7 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: white;
     gap: 20px;
+    border-radius: 20px;
+    width: 200px;
  margin: 0 auto;
- color: green;
+ color: red;
+}
+.loading-box img{
+    width: 100px;
+    height: 100px;
 }

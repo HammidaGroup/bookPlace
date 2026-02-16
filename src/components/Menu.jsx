@@ -65,6 +65,12 @@ if(menuConditionalState.menuVisbleConditionalData == true){
                                 <span>Privacy Policy </span>
                         </div>
                     </li>
+                    <li>
+                        <div>
+                            <img onClick={localStorage.clear()} className="menu-btn" src={logoutpng}alt="Logout Icon"/>
+                                <span>Logout</span>
+                        </div>
+                    </li>
                     
 
                 </ul>

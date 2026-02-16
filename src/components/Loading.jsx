@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Loading.css";
-import LoadingGif from "../assets/gif/addingPlot.gif"
+import LoadingGif from "../assets/gif/loading.gif"
 const Loading = () => {
   return (
     <>
