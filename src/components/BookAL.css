@@ -5,7 +5,7 @@
     justify-content: center;
     gap: 20px;
     
-    background: white;
+    background: var(--header-color);
     color: red;
    
     height: 100%;

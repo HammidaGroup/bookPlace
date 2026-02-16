@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: white;
+    background: var(--header-color);
     gap: 20px;
     border-radius: 20px;
     width: 200px;
