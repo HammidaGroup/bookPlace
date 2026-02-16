@@ -23,7 +23,7 @@ const [imgPreview, setImgPreview] = useState(null)
     return;
   }
 
-  fetch("http://localhost:3000/api/auth/verify", {
+  fetch("https://bookplace-backend.onrender.com/api/auth/verify", {
     headers: {
       Authorization: `Bearer ${token}`,
     },

@@ -23,7 +23,7 @@ const HomePage = () => {
         setIsLoading(true);
 
         const response = await fetch(
-          "http://localhost:3000/api/send/bookData"
+          "https://bookplace-backend.onrender.com/api/send/bookData"
         );
 
         if (!response.ok) {
