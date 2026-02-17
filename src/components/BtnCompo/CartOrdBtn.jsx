@@ -1,18 +1,20 @@
 import React from 'react'
 
 const CartOrdBtn = ({value , total}) => {
+ 
   
   const ordBtnHandler = ()=>{
-    console.log(value);
+    
     const message = `Hello Sir/Madam,
 
 I am interested in buying this second-hand book.
  ${value.map(element => {
   
   return `
-  ${element.class}
- 💰 Price: ₹${element.price}
-  🖼 Image: ${element.img}
+  ${element.bookClass} ${element.subject}
+  Description: ${element.bookDesc}
+ 💰 Price: ₹${element.bookPrice}
+  🖼 Image: ${element.bookImg}
   ` 
  })
 }
