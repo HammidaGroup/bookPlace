@@ -16,7 +16,10 @@ const Menu = () => {
 let menu ;
 // console.log(menuConditionalState.menuVisbleConditionalData);
 
-
+const logoutHandler = () => {
+  localStorage.removeItem("token");
+  window.location.href = "/"; // Redirect to home page after logout
+}
 
 if(menuConditionalState.menuVisbleConditionalData == true){
     menu = (
@@ -67,7 +70,7 @@ if(menuConditionalState.menuVisbleConditionalData == true){
                     </li>
                     <li>
                         <div>
-                            <img onClick={localStorage.clear()} className="menu-btn" src={logoutpng}alt="Logout Icon"/>
+                            <img onClick={logoutHandler} className="menu-btn" src={logoutpng}alt="Logout Icon"/>
                                 <span>Logout</span>
                         </div>
                     </li>
