@@ -11,7 +11,7 @@ const LoginSuccess = () => {
 
     if (token) {
       localStorage.setItem("token", token);
-      navigate("/");
+      navigate("/AddBook");
     }
   }, [params]);
 
