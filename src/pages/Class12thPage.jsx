@@ -5,6 +5,7 @@ import BookCard from '../components/CardComponents/Card';
 import Loading from '../components/Loading';
 import Catogary from '../components/Catogary';
 import { searchValContext } from '../context/searchValContext';
+import Menu from '../components/Menu';
 
 const Class12thPage = () => {
   const [books, setBooks] = useState([]);
@@ -72,7 +73,7 @@ const Class12thPage = () => {
     <>
       <Header />
       <div className="class-page-container">
-        
+        <Menu/>
        
         <Catogary/>
         {loading && <Loading/>}

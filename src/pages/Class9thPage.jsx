@@ -6,6 +6,7 @@ import Loading from '../components/Loading';
 import Catogary from '../components/Catogary';
 import { searchValContext } from '../context/searchValContext';
 import Header from '../components/HeaderComp/Header';
+import Menu from '../components/Menu';
 
 const Class9thPage = () => {
   const [books, setBooks] = useState([]);
@@ -71,7 +72,7 @@ const Class9thPage = () => {
     <>
       <Header/>
       <div className="class-page-container">
-        
+        <Menu/>
        
         <Catogary/>
         {loading && <Loading/>}
