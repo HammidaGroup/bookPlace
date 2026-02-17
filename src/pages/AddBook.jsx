@@ -53,7 +53,7 @@ const [isWrong, setIsWrong] = useState(false)
    formData.append("bookDesc",bookDesc)
    formData.append("token",localStorage.getItem("token"))
 
-const response = await fetch("http://https://bookplace-backend.onrender.com/api/book/add",{
+const response = await fetch("https://bookplace-backend.onrender.com/api/book/add",{
 
   method:"POST",
   body:formData
