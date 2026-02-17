@@ -7,6 +7,7 @@ import About from './pages/About'
 import AddBook from './pages/AddBook'
 import JoinPage from './pages/JoinPage'
 import LoginSuccess from './middlewares/LoginSuccess'
+import OpenInChrome from './middlewares/OpenInChrome'
 
 const App = () => {
   return (
@@ -16,6 +17,10 @@ const App = () => {
       <Route path='/' element={<HomePage/>}/>
   
    <Route path="/login-success" element={<LoginSuccess />} />
+  
+
+<Route path="/open-in-chrome" element={<OpenInChrome />} />
+
 
 
       <Route path='/join' element={<JoinPage/>}/>
