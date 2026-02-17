@@ -46,6 +46,7 @@ const styles = {
     alignItems: "center",
     textAlign: "center",
     padding: "20px",
+     color: "black",
     backgroundColor: "#f5f5f5",
   },
   button: {
