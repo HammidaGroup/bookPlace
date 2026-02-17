@@ -1,17 +1,18 @@
 import React, { useContext, useEffect, useState } from 'react'
 import "./Header.css"
 import bookPlaceLogo from "/bookPlace.webp"
-import addCartPng from "../assets/add-to-cart.png";
-import menuPng from "../assets/menu.png"
+import addCartPng from "../../assets/add-to-cart.png";
+import menuPng from "../../assets/menu.png"
 
-import { MenuLogicContext } from '../context/menuLogicContext'
+import { MenuLogicContext } from '../../context/menuLogicContext'
 import { useNavigate } from 'react-router-dom';
-import { cartContext } from '../context/CartCotext';
-import JoinBtn from './BtnCompo/JoinBtn';
+import { cartContext } from '../../context/CartCotext';
+import JoinBtn from '../BtnCompo/JoinBtn';
 
-import AddBookBtn from './BtnCompo/AddBookBtn';
+import AddBookBtn from '../BtnCompo/AddBookBtn';
 
-const Header = () => {
+
+const HeaderHome = () => {
 
   const cartContextState = useContext(cartContext)
   const navigate = useNavigate();
@@ -64,6 +65,7 @@ const cartHandler = ()=>{
        </div>
         <img className='menu-btn' src={menuPng} onClick={menuHandler} alt="menu" />
         
+        {/* <SearchInp/> */}
       <AddBookBtn/>
       </div>
     </nav>
@@ -71,4 +73,4 @@ const cartHandler = ()=>{
   )
 }
 
-export default Header
+export default HeaderHome

@@ -1,0 +1,36 @@
+
+ .searchBox{
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+ 
+    width: 230px;
+   
+    position: relative;
+    background: #000;
+    margin-right: 10px;
+}
+.searchBox img{
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+   top: 7%;
+    right: 0%;
+}
+.searchBox input{
+    padding: 10px;
+    /* min-width: 100px; */
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid ;
+    font-size: large;
+    text-transform:capitalize;
+    
+    background: white;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.70);
+    color: rgb(17, 122, 17);
+    
+}

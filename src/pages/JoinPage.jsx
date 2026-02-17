@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./JoinPage.css";
-import Header from '../components/Header'
+import HeaderHome from '../components/HeaderComp/HeaderHome';
 import googleSvg from "../assets/google-logo-search-new-svgrepo-com.svg"
 import Menu from '../components/Menu';
 import { useNavigate, useSearchParams } from 'react-router-dom';
@@ -38,7 +38,7 @@ const joinHandler = () => {
 
   return (
     <>
-    <Header/>
+    <HeaderHome/>
     <div className="signup-container">
       <Menu/>
       {/* <SomthingWrong/> */}

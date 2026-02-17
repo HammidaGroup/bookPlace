@@ -1,12 +1,12 @@
 import React from "react";
 import "./About.css";
-import Header from "../components/Header";
+import HeaderHome from "../components/HeaderComp/HeaderHome";
 import Menu from "../components/Menu";
 
 const About = () => {
   return (
     <>
-    <Header/>
+    <HeaderHome/>
     <div className="about-container">
         <Menu/>
       

@@ -8,6 +8,10 @@ import AddBook from './pages/AddBook'
 import JoinPage from './pages/JoinPage'
 import LoginSuccess from './middlewares/LoginSuccess'
 import OpenInChrome from './middlewares/OpenInChrome'
+import Class9thPage from './pages/Class9thPage'
+import Class10thPage from './pages/Class10thPage'
+import Class11thPage from './pages/Class11thPage'
+import Class12thPage from './pages/Class12thPage'
 
 const App = () => {
   return (
@@ -20,7 +24,10 @@ const App = () => {
   
 
 <Route path="/open-in-chrome" element={<OpenInChrome />} />
-
+<Route path='/class9thBook' element={<Class9thPage/>}/>
+<Route path='/class10thBook' element={<Class10thPage/>}/>
+<Route path='/class11thBook' element={<Class11thPage/>}/>
+<Route path='/class12thBook' element={<Class12thPage/>}/>
 
 
       <Route path='/join' element={<JoinPage/>}/>

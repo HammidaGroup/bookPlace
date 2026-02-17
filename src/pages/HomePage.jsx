@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./HomePage.css";
-import Header from "../components/Header";
+
 import BookCard from "../components/CardComponents/Card";
 import { searchValContext } from "../context/searchValContext";
 import Menu from "../components/Menu";
@@ -8,6 +8,7 @@ import HomePageTopHeroComponent from "../components/HomePageTopHero-Component";
 import Loading from "../components/Loading";
 import Footer from "../components/Footer";
 import Catogary from "../components/Catogary";
+import HeaderHome from "../components/HeaderComp/HeaderHome";
 
 const HomePage = () => {
   const { searchVal } = useContext(searchValContext);
@@ -103,7 +104,7 @@ data.data.reverse()// Show latest books first
 
   return (
     <>
-      <Header />
+    <HeaderHome/>
       <div className="homeMainDiv">
         <Menu />
         <HomePageTopHeroComponent />

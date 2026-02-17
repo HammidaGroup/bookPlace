@@ -5,6 +5,7 @@
     height: 100px;
     overflow: scroll;
     gap: 10px;
+    margin-top: 10px;
 }
 .catogary-main-div .classDiv{
     background:

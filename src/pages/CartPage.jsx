@@ -1,7 +1,7 @@
 
 import React, { useContext, useEffect, useState } from 'react';
 import "./CartPages.css";
-import Header from '../components/Header';
+import HeaderHome from '../components/HeaderComp/HeaderHome';
 import Menu from '../components/Menu';
 import { cartContext } from '../context/CartCotext';
 import CartOrdBtn from '../components/BtnCompo/CartOrdBtn';
@@ -46,7 +46,7 @@ const CartPage = () => {
 
   return (
     <>
-    <Header/>
+    <HeaderHome/>
     <div className="cart-page">
         <Menu/>
       <h2>Cart</h2>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./AddBook.css"
-import Header from '../components/Header'
+import Header from '../components/HeaderComp/Header'
 import Menu from '../components/Menu'
 import inpImgIcon from "../assets/inpImgIcon.jpg"
 import { useNavigate } from 'react-router-dom'
