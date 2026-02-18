@@ -11,6 +11,7 @@ import Catogary from "../components/Catogary";
 import HeaderHome from "../components/HeaderComp/HeaderHome";
 
 const HomePage = () => {
+  localStorage.removeItem("classAcCo")
   const { searchVal } = useContext(searchValContext);
 
   const [books, setBooks] = useState([]);

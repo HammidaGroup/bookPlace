@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import "./Card.css";
-import addCartPng from "../../assets/add-to-cart.png";
+import cartPng from "../../assets/cart.png";
 
 import { useNavigate } from "react-router-dom";
 import { cartContext } from "../../context/CartCotext";
@@ -73,7 +73,7 @@ Looking forward to your response.
       <div className="book-img">
         <img className="bookImg" src={value.bookImg} alt="book" />
         <img
-          src={addCartPng}
+          src={cartPng}
           className="cart-btn"
           onClick={addCartHandler}
           alt="favorite"

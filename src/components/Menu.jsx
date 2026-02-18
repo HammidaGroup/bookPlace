@@ -7,7 +7,7 @@ import privacypng from "../assets/privacy-policy.png";
 import addpng  from "../assets/add.png"
 import logoutpng from "../assets/logout.png"
 import deshboardpng from "../assets/dashboard.png"
-import favoritePng from "../assets/favorite-black.png"
+import cartPng from "../assets/cart.png"
 import { Link } from "react-router-dom";
 import { MenuLogicContext } from "../context/menuLogicContext";
 
@@ -46,6 +46,15 @@ if(menuConditionalState.menuVisbleConditionalData == true){
                         </div>
                     </li>
                    </Link>
+                   <Link to="/cart">
+                    <li>
+                        <div>
+                            
+                            <img className="menu-btn" src={cartPng} alt="Home Icon"/>
+                                <span>Cart</span>
+                        </div>
+                    </li>
+                   </Link>
                          
                     <li>
                         <div>
@@ -69,8 +78,8 @@ if(menuConditionalState.menuVisbleConditionalData == true){
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <img onClick={logoutHandler} className="menu-btn" src={logoutpng}alt="Logout Icon"/>
+                        <div onClick={logoutHandler} >
+                            <img className="menu-btn" src={logoutpng}alt="Logout Icon"/>
                                 <span>Logout</span>
                         </div>
                     </li>

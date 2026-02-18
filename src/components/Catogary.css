@@ -28,3 +28,6 @@ font-size: larger;
 border-radius: 5px;
 
 }
+.catogary-main-div .classDiv:active{
+  color: red;
+}

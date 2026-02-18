@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import "./Header.css"
 import bookPlaceLogo from "/bookPlace.webp"
-import addCartPng from "../../assets/add-to-cart.png";
+
 import menuPng from "../../assets/menu.png"
 
 import { MenuLogicContext } from '../../context/menuLogicContext'
