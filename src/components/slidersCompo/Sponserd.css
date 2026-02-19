@@ -1,6 +1,6 @@
 .sponserd-main {
-  /* margin: 20px 0; */
-  padding: 10px;
+  margin-left: 5px;
+  /* padding: 10px; */
 }
 
 .sponserd-heading {
@@ -31,15 +31,31 @@
   background: white;
 }
 
-.sponserd-slider .spo-btn{
-    position: absolute;
-    background: white;
-    cursor: pointer;
-    color: #000;
-    width: 100px;
-    right: 10px;
-    bottom: 10px;
+.sponserd-slider .spo-btn {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+
+  background: linear-gradient(135deg, #228B5E, #176B47);
+  color: #fff;
+
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 20px;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
+.sponserd-slider .spo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
 .sponserd-slider .spo-btn:active{
    background: #228B5E;
    color: white;
