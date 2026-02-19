@@ -8,6 +8,10 @@ import { searchValContext } from '../context/searchValContext';
 import Menu from '../components/Menu';
 
 const Class11thPage = () => {
+  useEffect(() => {
+  document.title = "Class 11 Books | BookPlace Azamgarh";
+}, []);
+
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

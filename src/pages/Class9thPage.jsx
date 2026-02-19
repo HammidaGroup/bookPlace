@@ -9,6 +9,11 @@ import Header from '../components/HeaderComp/Header';
 import Menu from '../components/Menu';
 
 const Class9thPage = () => {
+
+  useEffect(() => {
+  document.title = "Class 9 Books | BookPlace Azamgarh";
+}, []);
+
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -65,11 +70,12 @@ const Class9thPage = () => {
     return result;
   };
 
-  let content;
+
   
 
   return (
     <>
+    
       <Header/>
       <div className="class-page-container">
         <Menu/>
