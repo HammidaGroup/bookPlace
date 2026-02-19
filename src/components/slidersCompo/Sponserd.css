@@ -27,12 +27,25 @@
   overflow: hidden;
   flex-shrink: 0;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  position: relative;
   background: white;
 }
 
+.sponserd-slider .spo-btn{
+    position: absolute;
+    background: white;
+    cursor: pointer;
+    color: #000;
+    width: 100px;
+    right: 10px;
+    bottom: 10px;
+}
+.sponserd-slider .spo-btn:active{
+   background: #228B5E;
+   color: white;
+}
 .sponserd-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  cursor: pointer;
 }
