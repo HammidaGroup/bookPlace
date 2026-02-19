@@ -13,7 +13,7 @@ const HomePageTopHeroComponent = () => {
       <div className="top-hero-div">
         
       <div className="top-hero-content">
-          <h1 >Buy & Sell <strong>Second-Hand </strong> Books Near You</h1>
+          <h1 >UP Board ki sasti <strong>Second-Hand </strong> Books - Azamgarh</h1>
         <p>UP Board ke school books saste daam par kharidein aur bechein — Class 9 se 12 tak, sab ek jagah.</p>
         <div className="searchBox">
 <img src={searchIcon} alt="search icon" />

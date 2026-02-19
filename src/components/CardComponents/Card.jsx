@@ -5,6 +5,7 @@ import cartPng from "../../assets/cart.png";
 import { useNavigate } from "react-router-dom";
 import { cartContext } from "../../context/CartCotext";
 
+
 const BookCard = ({ value }) => {
   const navigate = useNavigate();
  const cartCotextState = useContext(cartContext)
@@ -31,6 +32,7 @@ Looking forward to your response.
   };
 
   const addCartHandler = () => {
+    
   let cart = [];
 
   // safe read from localStorage

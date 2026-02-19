@@ -34,7 +34,8 @@ const [cartCount, setCartCount] = useState(0);
 
 
   useEffect(() => {
-    const storedCart = localStorage.getItem("cart");
+   const cartUpdate = ()=>{
+     const storedCart = localStorage.getItem("cart");
     if (storedCart) {
       try {
         const cartItems = JSON.parse(storedCart);
@@ -46,7 +47,11 @@ const [cartCount, setCartCount] = useState(0);
     } else {
       setCartCount(0);  
     }
-    }, []);
+   }
+    cartUpdate();
+    
+    
+  }, []);
 const cartHandler = ()=>{
   navigate("/cart")
 

@@ -39,21 +39,40 @@ const joinHandler = () => {
   return (
     <>
     <HeaderHome/>
-    <div className="signup-container">
-      <Menu/>
+   
       {/* <SomthingWrong/> */}
       {/* <h2 className='signup-title' ></h2> */}
     
      
-        <button
+       
+
+        <div className="join-container">
+          <Menu/>
+  <div className="join-box">
+    <h1>BookPlace से जुड़ें 📚</h1>
+    <p className="join-sub">
+      अपनी पुरानी किताब बेचें और सस्ती किताबें खरीदें।
+      Azamgarh के छात्रों के लिए एक भरोसेमंद प्लेटफॉर्म।
+    </p>
+
+    <div className="features">
+      <p>✔ 100% Free Registration</p>
+      <p>✔ Safe & Secure Login</p>
+      <p>✔ Easy Book Listing</p>
+    </div>
+
+     <button
           type="button"
-            className="google-btn"
+          className="google-btn"
           onClick={joinHandler}
-        >
+          >
           <img src={googleSvg} alt="Google" style={{ width: '22px', height: '22px' }} />
           Continue with Google
         </button>
-      </div>
+  </div>
+</div>
+
+      
       
       
     

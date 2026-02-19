@@ -32,8 +32,8 @@ button{
 
   padding: 12px;
   border-radius: 5px;
-  background: rgb(194, 71, 71);
-  color: var(--header-color);
+  background: rgb(34, 139, 94);
+  color: white;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   cursor: pointer;
   

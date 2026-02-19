@@ -55,6 +55,15 @@ if(menuConditionalState.menuVisbleConditionalData == true){
                         </div>
                     </li>
                    </Link>
+                   <Link to="/DashBoard">
+                    <li>
+                        <div>
+                            
+                            <img className="menu-btn" src={deshboardpng} alt="Home Icon"/>
+                                <span>Dashboard</span>
+                        </div>
+                    </li>
+                   </Link>
                          
                     <li>
                         <div>
