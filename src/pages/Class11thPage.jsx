@@ -10,6 +10,14 @@ import Menu from '../components/Menu';
 const Class11thPage = () => {
   useEffect(() => {
   document.title = "Class 11 Books | BookPlace Azamgarh";
+
+  const meta = document.querySelector("meta[name='description']");
+  if (meta) {
+    meta.setAttribute(
+      "content",
+      "Buy and sell second-hand Class 11 UP Board books in Azamgarh at affordable prices."
+    );
+  }
 }, []);
 
   const [books, setBooks] = useState([]);

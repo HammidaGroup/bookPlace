@@ -8,9 +8,18 @@ import { searchValContext } from '../context/searchValContext';
 import Menu from '../components/Menu';
 
 const Class12thPage = () => {
-  useEffect(() => {
+ useEffect(() => {
   document.title = "Class 12 Books | BookPlace Azamgarh";
+
+  const meta = document.querySelector("meta[name='description']");
+  if (meta) {
+    meta.setAttribute(
+      "content",
+      "Buy and sell second-hand Class 12 UP Board books in Azamgarh at affordable prices."
+    );
+  }
 }, []);
+
 
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
