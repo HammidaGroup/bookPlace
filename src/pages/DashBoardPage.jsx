@@ -4,13 +4,38 @@ import Menu from '../components/Menu'
 import DashCard from "../components/CardComponents/DashCard"
 import { useEffect, useState } from "react"
 import Loading from "../components/Loading"
+import { useNavigate } from "react-router-dom"
 
 const DashBoardPage = () => {
+    const navigate = useNavigate()
+    
    const  formData = new FormData()
     const [books, setBooks] = useState([]);
       const [filteredBooks, setFilteredBooks] = useState([]);
       const [isLoading, setIsLoading] = useState(true);
      
+          useEffect(() => {
+        const token = localStorage.getItem("token");
+      
+        if (!token) {
+          navigate("/join");
+          return;
+        }
+      
+        fetch("https://bookplace-backend.onrender.com/api/auth/verify", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+          .then(res => {
+            if (!res.ok) throw new Error("Unauthorized");
+          })
+          .catch(() => {
+            localStorage.removeItem("token");
+            navigate("/join");
+          });
+      }, []);
+      
     
       useEffect(() => {
          formData.append("token",localStorage.getItem("token"))
