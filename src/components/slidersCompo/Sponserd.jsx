@@ -28,7 +28,7 @@ Thank you.`;
       <div className="sponserd-slider">
         {[1,2,3,4,5,6].map((item, index) => (
           <div  className="sponserd-card" key={index}>
-            <button onClick={sponHandler} className="spo-btn">Click</button>
+            <button onClick={sponHandler} className="spo-btn">View Details</button>
             <img src={sangharshCochingSpo} alt="sangharsh coaching" />
           </div>
         ))}

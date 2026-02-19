@@ -1,9 +1,14 @@
 .book-card {
   width: 260px;
-  background: #fff;
+margin-bottom: 8px;
+
+
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+ background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
   transition: 0.3s;
 }
 
