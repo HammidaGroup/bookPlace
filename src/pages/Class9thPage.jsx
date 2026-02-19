@@ -3,7 +3,7 @@ import "./ClassPage.css";
 
 import BookCard from '../components/CardComponents/Card';
 import Loading from '../components/Loading';
-import Catogary from '../components/Catogary';
+import Catogary from '../components/slidersCompo/Catogary';
 import { searchValContext } from '../context/searchValContext';
 import Header from '../components/HeaderComp/Header';
 import Menu from '../components/Menu';

@@ -7,8 +7,9 @@ import Menu from "../components/Menu";
 import HomePageTopHeroComponent from "../components/HomePageTopHero-Component";
 import Loading from "../components/Loading";
 import Footer from "../components/Footer";
-import Catogary from "../components/Catogary";
+import Catogary from "../components/slidersCompo/Catogary";
 import HeaderHome from "../components/HeaderComp/HeaderHome";
+import Sponserd from "../components/slidersCompo/Sponserd";
 
 const HomePage = () => {
   localStorage.removeItem("classAcCo")
@@ -110,6 +111,7 @@ data.data.reverse()// Show latest books first
         <Menu />
         <HomePageTopHeroComponent />
         <Catogary />
+        <Sponserd/>
         <div className="home-card-div">{content}</div>
         {/* <Footer /> */}
       </div>
