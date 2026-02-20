@@ -4,7 +4,7 @@
     /* background-color: rebeccapurple; */
     position: absolute;
     
-    z-index: 9999;
+    z-index: 999;
 }
 .menu-box {
     position: fixed; /* Menu को फिक्स रखने के लिए */
