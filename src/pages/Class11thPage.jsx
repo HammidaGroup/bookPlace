@@ -33,8 +33,7 @@ const Class11thPage = () => {
         const response = await fetch('https://bookplace-backend.onrender.com/api/send/bookData');
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
-        // Filter for class 9 books
-        // console.log(data.data);
+         data.data.reverse()// Show latest books first
         
         const class11Books = data.data.filter(book => book.bookClass === "11");
 
