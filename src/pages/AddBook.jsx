@@ -26,27 +26,27 @@ const AddBook = () => {
   const [isWrong, setIsWrong] = useState(false)
 
   // 🔐 Token Verify
-  // useEffect(() => {
-  //   const token = localStorage.getItem("token")
+  useEffect(() => {
+    const token = localStorage.getItem("token")
 
-  //   if (!token) {
-  //     navigate("/join")
-  //     return
-  //   }
+    if (!token) {
+      navigate("/join")
+      return
+    }
 
-  //   fetch("https://bookplace-backend.onrender.com/api/auth/verify", {
-  //     headers: {
-  //       Authorization: `Bearer ${token}`,
-  //     },
-  //   })
-  //     .then(res => {
-  //       if (!res.ok) throw new Error("Unauthorized")
-  //     })
-  //     .catch(() => {
-  //       localStorage.removeItem("token")
-  //       navigate("/join")
-  //     })
-  // }, [])
+    fetch("https://bookplace-backend.onrender.com/api/auth/verify", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then(res => {
+        if (!res.ok) throw new Error("Unauthorized")
+      })
+      .catch(() => {
+        localStorage.removeItem("token")
+        navigate("/join")
+      })
+  }, [])
 
   // 📸 Image Compress + Preview
   const imgChangeHandler = async (e) => {
