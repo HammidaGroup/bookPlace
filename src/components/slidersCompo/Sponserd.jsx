@@ -1,6 +1,7 @@
 import React from "react";
 import "./Sponserd.css";
 import sangharshCochingSpo from "../../assets/sponserd/sponserd-sangharshConching.png";
+import adsIcon from "../../assets/sponserd/adsIcon.png";
 
 const Sponserd = () => {
     const sponHandler=()=>{
@@ -23,7 +24,9 @@ Thank you.`;
     }
   return (
     <div className="sponserd-main">
-      <h2 className="sponserd-heading">Sponsored</h2>
+       <div className="icon-text-div">
+        <img className="adsIcon" src={adsIcon} alt="ads icon" /> <h2 className="sponserd-heading">Sponsored</h2>
+       </div>
 
       <div className="sponserd-slider">
         {[1,2,3,4,5,6].map((item, index) => (
