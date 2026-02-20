@@ -21,27 +21,7 @@ const [imgPreview, setImgPreview] = useState(null)
 const [isAdding, setIsAdding] = useState(false)
 const [isDone, setIsDone] = useState(false)
 const [isWrong, setIsWrong] = useState(false)
-    useEffect(() => {
-  const token = localStorage.getItem("token");
 
-  if (!token) {
-    navigate("/join");
-    return;
-  }
-
-  fetch("https://bookplace-backend.onrender.com/api/auth/verify", {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  })
-    .then(res => {
-      if (!res.ok) throw new Error("Unauthorized");
-    })
-    .catch(() => {
-      localStorage.removeItem("token");
-      navigate("/join");
-    });
-}, []);
 // localStorage.clear()
   const addBookBtnHandler = async () =>{
     setIsAdding(true)
@@ -89,6 +69,7 @@ if(mess.mess === "Book added successfully"){
         <Menu/>
        <div className="formDiv">
          <div className="imgDiv">
+         <h1 className='upImg-h2'>Upload image</h1>
               <label className="img-label">
     <img
       src={imgPreview ? imgPreview : inpImgIcon}

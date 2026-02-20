@@ -84,3 +84,14 @@ margin-bottom: 10px;
     height: 200px;
     margin-bottom: 10px;
 }
+
+.addBook-mainPage .upImg-h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    position: absolute;
+    z-index: 100;
+    top: 131px;
+    left: 18%;
+    width: 100%;
+    /* transform: translate(-50%, -50%); */
+}
