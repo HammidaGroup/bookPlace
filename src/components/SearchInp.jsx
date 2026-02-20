@@ -7,8 +7,8 @@ const SearchInp = () => {
      
   return (
     <div className="searchBox">
-   <img src={searchIcon} alt="search icon" />
-            <input onChange={e=>searchContextState.setSearchVal(e.target.value)} value={searchContextState.searchVal} type="text"  placeholder='book, class or subject...' />
+
+            <input onChange={e=>searchContextState.setSearchVal(e.target.value)} value={searchContextState.searchVal} type="text"  placeholder='Search, class or subject...' />
             
            </div> 
   )
