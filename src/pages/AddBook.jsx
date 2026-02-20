@@ -148,17 +148,21 @@ const AddBook = () => {
             </label>
           </div>
 
-          <div className="cla-sub-Div">
-            <select onChange={e => setBookClass(e.target.value)}>
+          <div  className="cla-div">
+            <select id='cla'  onChange={e => setBookClass(e.target.value)}>
               <option value="">Class</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
+              <option value="9">9th</option>
+              <option value="10">10th</option>
+              <option value="11">11th</option>
+              <option value="12">12th</option>
             </select>
+          </div>
+
+          <div className="sub-div">
+            
 
             <select id='sub' onChange={e => setSubject(e.target.value)}>
-              <option value="">Subject</option>
+              <option value="">Select Subject</option>
               <option value="English">English</option>
               <option value="Math">Math</option>
               <option value="Hindi">Hindi</option>
