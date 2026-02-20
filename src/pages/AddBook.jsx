@@ -26,27 +26,27 @@ const AddBook = () => {
   const [isWrong, setIsWrong] = useState(false)
 
   // 🔐 Token Verify
-  useEffect(() => {
-    const token = localStorage.getItem("token")
+  // useEffect(() => {
+  //   const token = localStorage.getItem("token")
 
-    if (!token) {
-      navigate("/join")
-      return
-    }
+  //   if (!token) {
+  //     navigate("/join")
+  //     return
+  //   }
 
-    fetch("https://bookplace-backend.onrender.com/api/auth/verify", {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
-      .then(res => {
-        if (!res.ok) throw new Error("Unauthorized")
-      })
-      .catch(() => {
-        localStorage.removeItem("token")
-        navigate("/join")
-      })
-  }, [])
+  //   fetch("https://bookplace-backend.onrender.com/api/auth/verify", {
+  //     headers: {
+  //       Authorization: `Bearer ${token}`,
+  //     },
+  //   })
+  //     .then(res => {
+  //       if (!res.ok) throw new Error("Unauthorized")
+  //     })
+  //     .catch(() => {
+  //       localStorage.removeItem("token")
+  //       navigate("/join")
+  //     })
+  // }, [])
 
   // 📸 Image Compress + Preview
   const imgChangeHandler = async (e) => {
@@ -157,7 +157,7 @@ const AddBook = () => {
               <option value="12">12</option>
             </select>
 
-            <select onChange={e => setSubject(e.target.value)}>
+            <select id='sub' onChange={e => setSubject(e.target.value)}>
               <option value="">Subject</option>
               <option value="English">English</option>
               <option value="Math">Math</option>
