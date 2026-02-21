@@ -13,6 +13,10 @@ const BookCard = ({ value }) => {
 
   const contactHandler = (e) => {
     e.stopPropagation();
+    window.gtag('event', 'whatsapp_click_card', {
+  event_category: 'engagement',
+  event_label: 'Contact Seller Button'
+});
 const message = `Hello Sir/Madam,
 
 I am interested in buying this second-hand book.

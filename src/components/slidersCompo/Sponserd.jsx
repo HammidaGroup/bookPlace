@@ -4,24 +4,30 @@ import sangharshCochingSpo from "../../assets/sponserd/sponserd-sangharshConchin
 import adsIcon from "../../assets/sponserd/adsIcon.png";
 
 const Sponserd = () => {
-    const sponHandler=()=>{
-     const message = `Hello Sir/Madam,
+ 
+    const sponHandler = (coachingName, phone) => {
 
-I came across Sangharsh Coaching Center through BookPlace.
+  if (window.gtag) {
+    window.gtag('event', 'sponsored_click', {
+      event_category: 'ads',
+      event_label: coachingName,
+    });
+  }
+
+ const message = `Hello Sir/Madam,
+
+I came across ${coachingName} through BookPlace.
 
 I am interested in getting more information about your courses and admission process.
 
 Please share the details.
 
-Thank you.`;
+Thank you.`
 
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
-
-    const url = `https://wa.me/918858809407?text=${encodeURIComponent(message)}`;
-    window.location.href = url;
-    // navigate("/contact")
-  
-    }
+  window.location.href = url;
+};
   return (
     <div className="sponserd-main">
        <div className="icon-text-div">
@@ -31,7 +37,7 @@ Thank you.`;
       <div className="sponserd-slider">
         {[1,2,3,4,5,6].map((item, index) => (
           <div  className="sponserd-card" key={index}>
-            <button onClick={sponHandler} className="spo-btn">View Details</button>
+            <button onClick={() => sponHandler("Sangharsh Coaching Center" , "918858809407")} className="spo-btn">View Details</button>
             <img src={sangharshCochingSpo} alt="sangharsh coaching" />
           </div>
         ))}
