@@ -11,13 +11,11 @@
     height: 100%;
     width: 90%;
     position: absolute;
-    z-index: 100;
+    z-index: 11;
     border-radius: 5px;
+   
 }
-.somthingWrong-mainDiv img {
-    width:100% ;
-    height: 500px;
-}
+
 .somthingWrong-mainDiv h1 {
     font-size: 24px;
     font-weight: bold;

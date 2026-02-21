@@ -70,6 +70,7 @@ margin-bottom: 10px;
     border-radius: 5px;
     text-align: center;
     object-fit: cover;
+    
 }
 .addBook-mainPage .inpDiv{
     /* background: #600; */
@@ -104,10 +105,11 @@ margin-bottom: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black;
     position: absolute;
-    z-index: 100;
-    top: 131px;
-    left: 18%;
-    width: 100%;
+    z-index: 10;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    width: 50%;
     /* transform: translate(-50%, -50%); */
 }
 

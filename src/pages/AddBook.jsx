@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./AddBook.css"
 import Header from '../components/HeaderComp/Header'
 import Menu from '../components/Menu'
-import inpImgIcon from "../assets/inpImgIcon.jpg"
+import inpImgIcon from "../assets/gif/imgInp.gif"
 import { useNavigate } from 'react-router-dom'
 import BookAL from '../components/BookAL'
 import BookAS from '../components/BookAS'
@@ -131,9 +131,9 @@ const AddBook = () => {
         <div className="formDiv">
 
           <div className="imgDiv">
-            {!imgPreview && <h1 className='upImg-h2'>Upload Image</h1>}
 
             <label className="img-label">
+            {!imgPreview && <h1 className='upImg-h2'>Upload Image</h1>}
               <img
                 src={imgPreview ? imgPreview : inpImgIcon}
                 alt="preview"

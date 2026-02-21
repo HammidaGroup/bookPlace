@@ -86,6 +86,7 @@ useEffect(() => {
        
         <Catogary/>
         {loading && <Loading/>}
+      
          {chunkArray(filteredBooks, 2).map((group, idx) => (
           <div className="card-cont" key={idx}>
             {group.map((book) => (

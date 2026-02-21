@@ -3,12 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--header-color);
+    
     gap: 20px;
     border-radius: 20px;
     width: 200px;
  margin: 0 auto;
- color: rgb(34, 139, 94);
+ color: rgb(13, 82, 151);
 }
 .loading-box img{
     width: 100px;
