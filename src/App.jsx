@@ -20,7 +20,7 @@ const App = () => {
     <>
     
       
-      <AnalyticsTracker>
+      <AnalyticsTracker/>
     <Routes>
 
       <Route path='/' element={<HomePage/>}/>
@@ -42,7 +42,7 @@ const App = () => {
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/cart' element={<CartPage/>}/>
     </Routes>
-      </AnalyticsTracker>
+     
       
     </>
   )
