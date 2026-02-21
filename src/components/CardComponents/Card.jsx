@@ -36,7 +36,7 @@ Looking forward to your response.
   };
 
   const addCartHandler = () => {
-    
+   
   let cart = [];
 
   // safe read from localStorage
@@ -66,6 +66,10 @@ Looking forward to your response.
   });
 
   localStorage.setItem("cart", JSON.stringify(cart));
+      window.gtag('event', 'add_to_cart', {
+  event_category: 'engagement',
+  event_label: 'Add To Cart Button'
+});
   alert("Book Added In Cart")
   // cartCotextState.setcartUpd()
   // console.log(cartCotextState);
