@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./About.css";
 import HeaderHome from "../components/HeaderComp/HeaderHome";
 import Menu from "../components/Menu";
 
 const About = () => {
+  useEffect(() => {
+    document.title = "About BookPlace";
+  
+    const meta = document.querySelector("meta[name='description']");
+    if (meta) {
+      meta.setAttribute(
+        "content",
+        "BookPlace is an online platform dedicated to providing academic books for students of classes 9th, 10th, 11th, and 12th. Our goal is to make quality education material easily accessible and affordable."
+      );
+    }
+  }, []);
+  
   return (
     <>
     <HeaderHome/>
