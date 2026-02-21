@@ -1,6 +1,6 @@
 import React from 'react'
 import HomePage from './pages/HomePage'
-import { Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import CartPage from './pages/CartPage'
 import Contact from './components/CardComponents/Contact'
 import About from './pages/About'
@@ -13,12 +13,16 @@ import Class10thPage from './pages/Class10thPage'
 import Class11thPage from './pages/Class11thPage'
 import Class12thPage from './pages/Class12thPage'
 import DashBoardPage from './pages/DashBoardPage'
+import AnalyticsTracker from './components/AnalyticsTracker'
 
 const App = () => {
   return (
     <>
     
+      
+      <AnalyticsTracker>
     <Routes>
+
       <Route path='/' element={<HomePage/>}/>
   
    <Route path="/login-success" element={<LoginSuccess />} />
@@ -38,6 +42,8 @@ const App = () => {
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/cart' element={<CartPage/>}/>
     </Routes>
+      </AnalyticsTracker>
+      
     </>
   )
 }
