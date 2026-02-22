@@ -1,0 +1,32 @@
+.dashTop-main{
+    height: 100px;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: #ce3737;
+    gap: 30px;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.dashTop-main .contentGroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    background: rgb(34, 139, 94);
+    margin: 10px;
+    border-radius: 10px;
+}
+.dashTop-main .contentGroup h2{
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+.dashTop-main .contentGroup p{
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+}

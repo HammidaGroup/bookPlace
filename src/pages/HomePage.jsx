@@ -34,11 +34,11 @@ const HomePage = () => {
         }
 
         const data = await response.json();
-data.data.reverse()// Show latest books first
+data.reverse()// Show latest books first
 // console.log(data);
 
         // Only active books
-        const activeBooks = data.data.filter(
+        const activeBooks = data.filter(
           (item) => item.status === "active"
         );
 

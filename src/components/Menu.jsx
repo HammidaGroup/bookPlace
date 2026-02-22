@@ -80,12 +80,14 @@ if(menuConditionalState.menuVisbleConditionalData == true){
                     </li>
 
 </Link>
+<Link to="/privacy-policy">
                     <li>
                         <div>
                             <img className="menu-btn" src={privacypng}alt="Privacy Policy Icon"/>
                                 <span>Privacy Policy </span>
                         </div>
                     </li>
+</Link>
                     <li>
                         <div onClick={logoutHandler} >
                             <img className="menu-btn" src={logoutpng}alt="Logout Icon"/>

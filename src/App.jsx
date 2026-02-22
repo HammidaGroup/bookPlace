@@ -14,6 +14,8 @@ import Class11thPage from './pages/Class11thPage'
 import Class12thPage from './pages/Class12thPage'
 import DashBoardPage from './pages/DashBoardPage'
 import AnalyticsTracker from './components/AnalyticsTracker'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import BooksInReview from './pages/BooksInReview'
 
 const App = () => {
   return (
@@ -34,11 +36,13 @@ const App = () => {
 <Route path='/class11thBook' element={<Class11thPage/>}/>
 <Route path='/class12thBook' element={<Class12thPage/>}/>
 <Route path='/DashBoard' element={<DashBoardPage/>}/>
+<Route path='/inReview' element={<BooksInReview/>}/>
 
 
       <Route path='/join' element={<JoinPage/>}/>
       <Route path='/AddBook' element={<AddBook/>}/>
       <Route path='/about' element={<About/>}/>
+      <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/cart' element={<CartPage/>}/>
     </Routes>

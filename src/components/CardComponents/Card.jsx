@@ -97,7 +97,7 @@ Looking forward to your response.
 
         <div className="btn-group">
           <button className="contact-btn" onClick={contactHandler}>
-            Contact Seller
+            Buy Book
           </button>
         </div>
       </div>

@@ -103,7 +103,7 @@ const AddBook = () => {
 
       if (mess.mess === "Book added successfully") {
         setIsDone(true)
-        setTimeout(() => navigate("/"), 2500)
+        
       } else {
         setIsWrong(true)
       }
@@ -124,6 +124,7 @@ const AddBook = () => {
 
         {isAdding && <BookAL />}
         {isDone && <BookAS />}
+     
         {isWrong && <SomthingWrong />}
 
         <Menu />

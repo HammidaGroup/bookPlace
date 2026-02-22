@@ -5,12 +5,16 @@ import DashCard from "../components/CardComponents/DashCard"
 import { useEffect, useState } from "react"
 import Loading from "../components/Loading"
 import { useNavigate } from "react-router-dom"
+import DashTop from "../components/DashTop"
+
 
 const DashBoardPage = () => {
     const navigate = useNavigate()
     
    const  formData = new FormData()
     const [books, setBooks] = useState([]);
+    const [booksInReview, setBooksInReview] = useState([]);
+    const [totalActive, setTotalActive] = useState([])
       const [filteredBooks, setFilteredBooks] = useState([]);
       const [isLoading, setIsLoading] = useState(true);
      
@@ -43,7 +47,7 @@ const DashBoardPage = () => {
           try {
             setIsLoading(true);
     
-            const response = await fetch("https://bookPlace-backend.onrender.com/api/data/dashboard",{
+            const response = await fetch("https://bookplace-backend.onrender.com/api/data/dashboard",{
                 method:"POST",
                 body:formData
             });
@@ -56,13 +60,21 @@ const DashBoardPage = () => {
     data.data.reverse()// Show latest books first
     // console.log(data);
     
-            // Only active books
-            const activeBooks = data.data.filter(
-              (item) => item.status === "active"
-            );
+              // Only active books
+              const activeBooks = data.data.filter(
+                (item) => item.status === "active"
+              );
     
             setBooks(activeBooks);
             setFilteredBooks(activeBooks);
+          
+
+            
+// Only books in review
+            const booksInReview = data.data.filter(
+              (item) => item.status === "in review"
+            );
+            setBooksInReview(booksInReview.length);
           } catch (error) {
             console.error("Fetch error:", error);
           } finally {
@@ -72,6 +84,7 @@ const DashBoardPage = () => {
     
         fetchBooks();
       }, []);
+      // console.log(booksInReview);
       
       
     // delete plot card UI from dashboard after delete plot from database
@@ -79,13 +92,19 @@ const DashBoardPage = () => {
   setFilteredBooks(pre=>pre.filter(book=>book._id !== id))
 
     }
+
+
+
+   
   return (
     <>
     <HeaderHome/>
     <div className="dashBoard-main">
         <Menu/>
         <h1>Dashboard</h1>
+      <DashTop booksInReview={booksInReview} totalActive={books.length}/>
        
+         
          
         <div className="dashCard-container">
               {isLoading ? <Loading/> : filteredBooks.length > 0 ? (
@@ -96,6 +115,7 @@ const DashBoardPage = () => {
                 <p>No books available</p>
               )}
         </div>
+        
         
     </div>
     </>

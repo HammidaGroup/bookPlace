@@ -27,6 +27,7 @@ const formData = new FormData();
              </div>
        
              <div className="book-content">
+                <p className="status">{value.status}</p>
                <h3>{value.bookClass}th</h3>
                <p className="price">₹{value.bookPrice}</p>
                <p className="desc">{value.bookDesc}</p>

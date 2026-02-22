@@ -6,8 +6,9 @@ const BookAS = () => {
    <>
    <div className="bookAS-mainDiv">
  <img src="https://i.gifer.com/7efs.gif" alt="done" />
- <h1>Book Added Sucsesfully</h1>
-    <h3>Redirecting to Home Page...</h3>
+ <h1>Your Book In Review</h1>
+    <button className='continueAdd' onClick={()=>window.location.href="AddBook"}>Continue Add</button>
+    <button className='continueAdd' onClick={()=>window.location.href="/inReview"}>See Review</button>
    </div>
    </>
   )

@@ -1,0 +1,52 @@
+.booksInReview-main{
+    width: 100%;
+    background-color: #f9f9f9;
+    /* padding: 20px; */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: black;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+.booksInReview-main .reviewBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.booksInReview-main .reviewCard{
+    display: flex;
+    background-color: rgb(235, 226, 226);
+    border-radius: 8px;
+    width: 70%;
+    /* padding: 15px; */
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.booksInReview-main .reviewCard .left{
+    /* background: #000; */
+    width: 30%;
+    padding: 3px;
+}
+.booksInReview-main .reviewCard .left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+.booksInReview-main .reviewCard .right{
+    padding: 1px;
+}
+.booksInReview-main .reviewCard .right strong{
+   color: black;
+}
+.booksInReview-main .reviewCard .right .status{
+    color: orange;
+    font-weight: bold;
+}

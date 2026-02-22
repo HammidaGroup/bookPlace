@@ -29,7 +29,9 @@
 .dashCard-main .book-content {
   padding: 12px;
 }
-
+.book-content .status {
+  color: green;
+}
 .dashCard-main .book-content h3 {
   margin: 0;
   font-size: 18px;
