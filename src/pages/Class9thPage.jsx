@@ -7,6 +7,7 @@ import Catogary from '../components/slidersCompo/Catogary';
 import { searchValContext } from '../context/searchValContext';
 import Header from '../components/HeaderComp/Header';
 import Menu from '../components/Menu';
+import Footer from '../components/Footer';
 
 const Class9thPage = () => {
 
@@ -98,6 +99,7 @@ const Class9thPage = () => {
             ))}
           </div>
         ))}
+        
       </div>
     </>
   );

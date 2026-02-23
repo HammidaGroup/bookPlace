@@ -112,7 +112,9 @@ data.reverse()// Show latest books first
         <HomePageTopHeroComponent />
         <Catogary />
         <Sponserd/>
-        <div className="home-card-div">{content}</div>
+        <div className="home-card-div">{content}
+          <Footer/>
+        </div>
         {/* <Footer /> */}
       </div>
     </>
