@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./About.css";
 import HeaderHome from "../components/HeaderComp/HeaderHome";
 import Menu from "../components/Menu";
+import Footer from "../components/Footer";
 
 const About = () => {
   useEffect(() => {
@@ -98,9 +99,7 @@ const About = () => {
         </p>
       </div>
 
-      <div className="about-footer">
-        <p>© 2026 BookPlace. All Rights Reserved.</p>
-      </div>
+     <Footer/>
 
     </div>
     </>

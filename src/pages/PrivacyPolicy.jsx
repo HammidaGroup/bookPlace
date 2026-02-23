@@ -2,6 +2,7 @@ import React from 'react'
 import "./PrivacyPolicy.css"
 import Header from '../components/HeaderComp/Header'
 import Menu from '../components/Menu'
+import Footer from '../components/Footer'
 const PrivacyPolicy = () => {
   return (
     <>
@@ -30,6 +31,7 @@ const PrivacyPolicy = () => {
         <p>हमारी प्राइवेसी पॉलिसी में समय-समय पर बदलाव हो सकते हैं। किसी भी बदलाव की सूचना हम अपनी वेबसाइट पर देंगे।</p>
       </section>
     </div>
+      <Footer/>
     </>
   )
 }

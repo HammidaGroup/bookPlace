@@ -15,6 +15,8 @@ import Class12thPage from './pages/Class12thPage'
 import DashBoardPage from './pages/DashBoardPage'
 import AnalyticsTracker from './components/AnalyticsTracker'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import ReturnPolicy from "./pages/ReturnPolicy";
+import TermsPage from "./pages/TermsPage";
 import BooksInReview from './pages/BooksInReview'
 
 const App = () => {
@@ -43,6 +45,9 @@ const App = () => {
       <Route path='/AddBook' element={<AddBook/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
+
+<Route path="/return-policy" element={<ReturnPolicy />} />
+<Route path="/terms-and-conditions" element={<TermsPage />} />
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/cart' element={<CartPage/>}/>
     </Routes>

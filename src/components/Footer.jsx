@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./Footer.css"
 
 const Footer = () => {
@@ -21,16 +22,16 @@ const Footer = () => {
           <p>
             Yahan students apni purani books bech kar paise kama sakte hain aur
             naye academic session ke liye low price par old books kharid sakte
-            hain. Agar aap UP Board class 10 ya class 12 ki second hand books
-            Azamgarh me dhund rahe hain to BookPlace aapke liye ek simple,
-            fast aur reliable solution hai.
+            hain.
           </p>
 
-          <p>
-            We focus on local students of Azamgarh district and nearby areas
-            including Thekma. Our goal is to build a strong student resale
-            network for school books.
-          </p>
+          {/* Legal Links Section */}
+          <div className="footer-links">
+            <Link to="/about">About Us</Link>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/terms-and-conditions">Terms & Conditions</Link>
+            <Link to="/return-policy">Return Policy</Link>
+          </div>
 
           <div className="footer-bottom">
             <p>© 2026 BookPlace | Serving Azamgarh & Thekma Students</p>
