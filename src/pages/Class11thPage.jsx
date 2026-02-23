@@ -6,6 +6,7 @@ import Loading from '../components/Loading';
 import Catogary from '../components/slidersCompo/Catogary';
 import { searchValContext } from '../context/searchValContext';
 import Menu from '../components/Menu';
+import Footer from '../components/Footer';
 
 const Class11thPage = () => {
   useEffect(() => {
@@ -33,9 +34,9 @@ const Class11thPage = () => {
         const response = await fetch('https://bookplace-backend.onrender.com/api/send/bookData');
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
-         data.data.reverse()// Show latest books first
+         data.reverse()// Show latest books first
         
-        const class11Books = data.data.filter(book => book.bookClass === "11");
+        const class11Books = data.filter(book => book.bookClass === "11");
 
         setBooks(class11Books);
       } catch (err) {
@@ -93,6 +94,7 @@ const Class11thPage = () => {
             ))}
           </div>
         ))}
+        <Footer/>
       </div>
     </>
   );
