@@ -73,6 +73,7 @@ const CartPage = () => {
       )}
      
     </div>
+    <Footer/>
     </>
   );
 };

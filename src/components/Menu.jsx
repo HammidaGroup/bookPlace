@@ -1,25 +1,32 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Menu.css"
 import homepng from "../assets/home.png";
 import aboutmepng from "../assets/aboutMe.png";
 import contactUspng from "../assets/contactUS.png";
 import privacypng from "../assets/privacy-policy.png";
 import addpng  from "../assets/add.png"
-import logoutpng from "../assets/logout.png"
+
 import deshboardpng from "../assets/dashboard.png"
 import cartPng from "../assets/cart.png"
 import { Link } from "react-router-dom";
 import { MenuLogicContext } from "../context/menuLogicContext";
+import LogoutBtn from "./BtnCompo/logoutBtn";
+import JoinBtn from "./BtnCompo/JoinBtn";
+import MenuProfile from "./BtnCompo/MenuProfile";
 
 const Menu = () => {
     const menuConditionalState = useContext(MenuLogicContext);
+    const [isLogin, setIsLogin] = useState(false)
 let menu ;
 // console.log(menuConditionalState.menuVisbleConditionalData);
 
-const logoutHandler = () => {
-  localStorage.removeItem("token");
-  window.location.href = "/"; // Redirect to home page after logout
+useEffect(()=>{
+    if (localStorage.getItem("token")) {
+    setIsLogin(true)
+
+    
 }
+},[])
 
 if(menuConditionalState.menuVisbleConditionalData == true){
     menu = (
@@ -88,11 +95,9 @@ if(menuConditionalState.menuVisbleConditionalData == true){
                         </div>
                     </li>
 </Link>
-                    <li>
-                        <div onClick={logoutHandler} >
-                            <img className="menu-btn" src={logoutpng}alt="Logout Icon"/>
-                                <span>Logout</span>
-                        </div>
+                    <li >
+                     {isLogin? <MenuProfile/>: <JoinBtn/>}
+                    
                     </li>
                     
 
