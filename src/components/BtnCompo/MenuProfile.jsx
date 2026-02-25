@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./MenuProfile.css"
-import LogoutBtn from './logoutBtn'
+import LogoutBtn from './LogoutBtn'
 import cutPng from "../../assets/cut.png"
 import morePng from "../../assets/more.png"
 const MenuProfile = () => {
