@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import "./MenuProfile.css"
 import LogoutBtn from './LogoutBtn'
 import cutPng from "../../assets/cut.png"
 import morePng from "../../assets/more.png"
 const MenuProfile = () => {
+ const moreBtnRef = useRef()
 const formData = new FormData()
 const [token, setToken] = useState(localStorage.getItem("token"))
 const [profileData, setProfileData] = useState([])
@@ -19,7 +20,7 @@ useEffect(()=>{
         body:formData
     })
     const data = await response.json()
-    console.log(data.menuProfileData[0].image);
+    // console.log(data.menuProfileData[0]);
     setProfileData(data.menuProfileData[0])
     
    }
@@ -28,15 +29,19 @@ useEffect(()=>{
 
 const onCut =()=>{
   setInfo(<></>)
+  moreBtnRef.current.style.visibility="visible"
 }
 const profileClickHandler = ()=>{
 setInfo(<>
   { <div className="menuProfileInfo-div">
-        <img onClick={onCut} className='cutBtn' src={cutPng} alt="" />
+        <img  onClick={onCut} className='cutBtn' src={cutPng} alt="cut btn" />
            <h3>{profileData.email}</h3>
            <LogoutBtn/>
         </div>}
 </>)
+moreBtnRef.current.style.visibility="hidden"
+
+
 }
   return (
     <>
@@ -46,8 +51,8 @@ setInfo(<>
             <img className='profileImg' src={profileData.image} alt="profile Image" />
         </div>
         <div className="right">
-            <h3>{profileData.displayName}</h3>
-            <img onClick={profileClickHandler} className='moreBtn' src={morePng} alt="morebtn" />
+            <h3>{profileData.firstName}</h3>
+            <img ref={moreBtnRef} onClick={profileClickHandler} className='moreBtn' src={morePng} alt="morebtn" />
         </div>
     </div>
     </>
