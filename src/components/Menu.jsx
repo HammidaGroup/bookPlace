@@ -10,7 +10,7 @@ import deshboardpng from "../assets/dashboard.png"
 import cartPng from "../assets/cart.png"
 import { Link } from "react-router-dom";
 import { MenuLogicContext } from "../context/menuLogicContext";
-import LogoutBtn from "./BtnCompo/logoutBtn";
+
 import JoinBtn from "./BtnCompo/JoinBtn";
 import MenuProfile from "./BtnCompo/MenuProfile";
 
