@@ -39,6 +39,7 @@ setInfo(<>
            <LogoutBtn/>
         </div>}
 </>)
+
 moreBtnRef.current.style.visibility="hidden"
 
 

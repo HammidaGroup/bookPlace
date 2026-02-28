@@ -22,6 +22,7 @@ const About = () => {
     <HeaderHome/>
     <div className="about-container">
         <Menu/>
+    
       
       <div className="about-hero">
         <h1>About BookPlace</h1>

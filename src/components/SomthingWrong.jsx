@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./SomethingWrong.css"
-
+import fhaSound from "./fhaSound.mp3"
+import useSound from 'use-sound'
 const SomthingWrong = () => {
+const [play, { stop }] = useSound(fhaSound);
+
+useEffect(() => {
+  play();
+}, []);
   const tryAgainHandler = () => {
     window.location.reload()
   }
