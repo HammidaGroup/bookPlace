@@ -8,7 +8,7 @@ const [play, { stop }] = useSound(fhaSound);
 useEffect(() => {
   play();
 }, []);
-  const tryAgainHandler = () => {
+const tryAgainHandler = () => {
     window.location.reload()
   }
   return (
