@@ -70,7 +70,8 @@ const AddBook = () => {
 
   // 📤 Add Book
   const addBookBtnHandler = async () => {
-
+   console.log("update hogayal bhai");
+   
     if (!bookImg || !bookClass || !subject || !bookPrice || !phoneNo) {
       alert("Please fill all required fields")
       return
