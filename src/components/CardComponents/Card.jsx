@@ -11,7 +11,7 @@ const BookCard = ({ value }) => {
  const cartCotextState = useContext(cartContext)
   
 
-  const contactHandler = (e) => {
+  const callSellerHandler = (e) => {
     e.stopPropagation();
     window.gtag('event', 'whatsapp_click_card', {
   event_category: 'engagement',
@@ -30,7 +30,7 @@ Looking forward to your response.
 `;
 
 
-    const url = `https://wa.me/917571950460?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/91${value.phoNum}?text=${encodeURIComponent(message)}`;
     window.location.href = url;
     // navigate("/contact")
   };
@@ -96,7 +96,7 @@ Looking forward to your response.
         <p className="desc">{value.bookDesc}</p>
 
         <div className="btn-group">
-          <button className="contact-btn" onClick={contactHandler}>
+          <button className="contact-btn" onClick={callSellerHandler}>
             Buy Book
           </button>
         </div>

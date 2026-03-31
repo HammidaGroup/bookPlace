@@ -92,7 +92,7 @@ const AddBook = () => {
       formData.append("token", localStorage.getItem("token"))
 
       const response = await fetch(
-        "https://bookplace-backuend.onrender.com/api/book/add",
+        "https://bookplace-backend.onrender.com/api/book/add",
         {
           method: "POST",
           body: formData
